@@ -6,6 +6,6 @@ package com.yws.demo.word2pdf;
  */
 public interface WordService {
 
-	void word2pdf(String inPath, String outPath) throws Exception;
+    void word2pdf(String inPath, String outPath) throws Exception;
 
 }

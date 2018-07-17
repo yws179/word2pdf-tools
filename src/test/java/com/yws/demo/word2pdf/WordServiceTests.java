@@ -17,25 +17,25 @@ import java.io.File;
 @SpringBootTest
 public class WordServiceTests {
 
-	@Resource
-	private WordService commandWordService;
+    @Resource
+    private WordService commandWordService;
 
-	@Resource
-	private WordService asposeWordService;
+    @Resource
+    private WordService asposeWordService;
 
-	@Test
-	public void testAsposeWord2Pdf() throws Exception {
-		test(asposeWordService);
-	}
+    @Test
+    public void testAsposeWord2Pdf() throws Exception {
+        test(asposeWordService);
+    }
 
-	@Test
-	public void testLibreOfficeCommandWord2Pdf() throws Exception {
-		test(commandWordService);
-	}
+    @Test
+    public void testLibreOfficeCommandWord2Pdf() throws Exception {
+        test(commandWordService);
+    }
 
-	public void test(WordService wordService) throws Exception {
-		File file = ResourceUtils.getFile("classpath:test.docx");
-		wordService.word2pdf(file.getAbsolutePath(), "./");
-	}
+    public void test(WordService wordService) throws Exception {
+        File file = ResourceUtils.getFile("classpath:test.docx");
+        wordService.word2pdf(file.getAbsolutePath(), "./");
+    }
 
 }
