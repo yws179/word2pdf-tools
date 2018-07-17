@@ -1,17 +1,9 @@
 package com.yws.demo.word2pdf;
 
-import org.apache.commons.io.IOUtils;
-import org.artofsolving.jodconverter.OfficeDocumentConverter;
-import org.artofsolving.jodconverter.office.DefaultOfficeManagerConfiguration;
-import org.artofsolving.jodconverter.office.OfficeManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.util.ResourceUtils;
-import org.springframework.util.StringUtils;
-
-import java.io.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

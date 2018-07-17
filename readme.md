@@ -5,8 +5,14 @@
 #### 方案一：Aspose库
 Aspose库是一款处理office文档都非常方便的库，支持多种语言，收费，支持免费试用（会在开头有红色版权标注）
 
+- [实现](https://github.com/yws179/word2pdf-demo/blob/master/src/main/java/com/yws/demo/word2pdf/impl/AsposeWordServiceImpl.java)
+- [运行](https://github.com/yws179/word2pdf-demo/blob/master/src/test/java/com/yws/demo/word2pdf/WordServiceTests.java)
+
 #### 方案二： 使用LibreOffice免费办公软件自带的soffice工具
 LibreOffice自带的soffice工具支持以命令的方式进行文件类型转换，所以本例子通过java执行命令来调用soffice完成word到pdf的转换
+
+- [实现](https://github.com/yws179/word2pdf-demo/blob/master/src/main/java/com/yws/demo/word2pdf/impl/LibreOfficeCommandWordServiceImpl.java)
+- [运行](https://github.com/yws179/word2pdf-demo/blob/master/src/test/java/com/yws/demo/word2pdf/WordServiceTests.java)
 
 #### 方案三： 使用Jacob库（待实现）（仅支持windows）
 此方法可通过调用 `Microsoft Office` / `WPS` 来实现转换
