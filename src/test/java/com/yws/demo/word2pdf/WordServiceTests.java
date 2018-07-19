@@ -23,6 +23,9 @@ public class WordServiceTests {
     @Resource
     private WordService asposeWordService;
 
+    @Resource
+    private WordService unoWordService;
+
     @Test
     public void testAsposeWord2Pdf() throws Exception {
         test(asposeWordService);
@@ -33,9 +36,15 @@ public class WordServiceTests {
         test(commandWordService);
     }
 
+    @Test
+    public void testLibreOfficeUnoWord2Pdf() throws Exception {
+        test(unoWordService);
+    }
+
     public void test(WordService wordService) throws Exception {
         File file = ResourceUtils.getFile("classpath:test.docx");
-        wordService.word2pdf(file.getAbsolutePath(), "./");
+        File outFile = new File("./test.pdf");
+        wordService.word2pdf(file.getAbsolutePath(), outFile.getAbsolutePath());
     }
 
 }
